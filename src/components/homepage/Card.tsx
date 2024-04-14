@@ -4,7 +4,7 @@ import styles from "./sections/style.module.css";
 import { CiCirclePlus } from "react-icons/ci";
 const Card = ({ card }: any) => {
   return (
-    <div className="flex flex-col border rounded-lg">
+    <div className="flex flex-col border rounded-lg pb-2">
       <div className={`${styles["parent-container"]} relative`}>
         <Image
           className="z-50 rounded-tl-lg rounded-tr-lg"
