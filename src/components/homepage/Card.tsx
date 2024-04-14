@@ -8,9 +8,9 @@ const Card = ({ card }: any) => {
       <div className={`${styles["parent-container"]} relative`}>
         <Image
           className="z-50 rounded-tl-lg rounded-tr-lg"
-          width={400}
-          height={600}
           src={card?.imageURL}
+          width={400}
+          height={800}
           alt="image"
           objectFit="cover"
         />

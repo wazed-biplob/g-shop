@@ -1,10 +1,10 @@
 import Card from "../Card";
-const CardSection = async () => {
+const FlashSale = async () => {
   const res = await fetch("https://g-shop-server.vercel.app/api/category");
   const data = await res.json();
 
   return (
-    <div className="flex flex-col w-[90%] mx-auto">
+    <div className="flex flex-col w-[90%] mx-auto mt-[100px]">
       <div className="flex justify-between items-center w-full mb-[26px]">
         <p className="text-[36px] font-bold">Flash Sale</p>
         <button className="border rounded-[64px] py-[12px] px-[28px] text-white bg-black">
@@ -22,4 +22,4 @@ const CardSection = async () => {
   );
 };
 
-export default CardSection;
+export default FlashSale;
