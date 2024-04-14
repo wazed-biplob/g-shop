@@ -1,28 +1,40 @@
 import Image from "next/image";
 import React from "react";
-
-import { MdOutlineFileDownload } from "react-icons/md";
+import styles from "./sections/style.module.css";
+import { CiCirclePlus } from "react-icons/ci";
 const Card = ({ card }: any) => {
   return (
     <div className="flex flex-col border rounded-lg">
-      <div className="relative">
+      <div className={`${styles["parent-container"]} relative`}>
         <Image
           className="z-50 rounded-tl-lg rounded-tr-lg"
           width={400}
-          height={400}
+          height={600}
           src={card?.imageURL}
           alt="image"
+          objectFit="cover"
         />
-        <p className="absolute top-4 left-4 border px-4 py-1 bg-slate-400 rounded-lg">
-          30%
+        <p className="absolute top-4 left-4 px-4 py-1 bg-[#3d3d3d] text-[#ffffff] rounded-lg">
+          -{card?.discount}%
         </p>
       </div>
-      <p className="text-[26px]">{card?.title}</p>
-      <div className="flex justify-between items-center">
-        <p>${card?.price}</p>
-        <button>
-          <MdOutlineFileDownload style={{ fontSize: "36px" }} />
-        </button>
+      <div className="w-[90%] mx-auto">
+        <p className="text-[22px] text-[#404040] font-[400]">{card?.title}</p>
+        <div className="flex justify-between items-center">
+          <div>
+            <span className="line-through text-[#404040] text-[14px]">
+              ${card?.price}
+            </span>
+            <span> </span>
+            <span className="text-[14px] text-black font-bold">
+              ${(card?.price - card?.price * (card?.discount / 100)).toFixed(2)}
+            </span>
+          </div>
+
+          <button>
+            <CiCirclePlus style={{ fontSize: "20px" }} />
+          </button>
+        </div>
       </div>
     </div>
   );

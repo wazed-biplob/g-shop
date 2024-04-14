@@ -5,9 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 const LoginPage = () => {
-  const handleSubmit = async (e: any) => {
-    console.log(e.target.name, e.target.email);
-  };
+  const handleSubmit = async (e: any) => {};
 
   return (
     <div className="my-10">

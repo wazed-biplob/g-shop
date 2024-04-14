@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Trout",
+    "description": "Trout is a freshwater fish known for its delicate flavor and tender flesh. It is often found in clear, cold streams and lakes. Trout can be cooked in various ways, including grilling, baking, broiling, or pan-searing. Its flesh ranges from pink to orange, depending on the species. Trout is rich in omega-3 fatty acids and is a good source of protein, vitamins, and minerals.",
+    "rating": 4.8,
+    "review": 12,
+    "imageURL": "https://i.ibb.co/6r95B4z/trout.jpg",
+    "price": 8.99,
+    "flashSale": true,
+    "category": "freshwater",
+    "createdAt": "2024-04-06T12:00:00.000Z",
+    "updatedAt": "2024-04-06T12:00:00.000Z",
+    "discount": 25
+  },
+  {
+    "id": 2,
+    "title": "Catfish",
+    "description": "Catfish is a freshwater fish with a mild, sweet taste and a tender, flaky texture. It is commonly found in rivers, lakes, and ponds. Catfish can be cooked in various ways, such as frying, baking, grilling, or blackening. It is often used in Southern cuisine and is known for its versatility. Catfish is a good source of protein and essential nutrients.",
+    "rating": 4.6,
+    "review": 10,
+    "imageURL": "https://i.ibb.co/K2mZgk2/catfish.jpg",
+    "price": 7.99,
+    "flashSale": false,
+    "category": "freshwater",
+    "createdAt": "2024-04-06T12:00:00.000Z",
+    "updatedAt": "2024-04-06T12:00:00.000Z",
+    "discount": 30
+  },
+  {
+    "id": 3,
+    "title": "Pike",
+    "description": "Pike, also known as northern pike, is a freshwater fish with a lean, firm flesh and a distinctive flavor. It is often found in lakes, rivers, and reservoirs. Pike can be prepared in various ways, including baking, grilling, or pan-frying. It is prized by anglers for its size and fighting ability. Pike is rich in protein and low in fat, making it a healthy choice for seafood lovers.",
+    "rating": 4.4,
+    "review": 8,
+    "imageURL": "https://i.ibb.co/89ncVvZ/pike.jpg",
+    "price": 9.99,
+    "flashSale": true,
+    "category": "freshwater",
+    "createdAt": "2024-04-06T12:00:00.000Z",
+    "updatedAt": "2024-04-06T12:00:00.000Z",
+    "discount": 20
+  }
+]
