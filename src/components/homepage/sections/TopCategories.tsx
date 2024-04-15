@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./style.module.css";
+import Button from "@/components/shared/Button";
 
 const TopCategories = async () => {
   const res = await fetch("https://g-shop-server.vercel.app/api/category");
@@ -60,9 +61,7 @@ const TopCategories = async () => {
         </div>
       </div>
       <div className="mt-[68px] mx-auto text-center mb-[10px]">
-        <button className="border rounded-[64px] py-[12px] px-[28px] text-white bg-black">
-          <span className="font-[600px] text-[26px]">View All &nbsp; &gt;</span>
-        </button>
+        <Button text="View All" />
       </div>
     </div>
   );
