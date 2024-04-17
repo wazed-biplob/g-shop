@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card";
 import Button from "@/components/shared/Button";
+import MostPopularProductCard from "../MostPopularProductCard";
 
 const MostPopularProducts = async () => {
   const res = await fetch("https://g-shop-server.vercel.app/api/category");
@@ -14,7 +15,7 @@ const MostPopularProducts = async () => {
       <div className="grid grid-cols-4 gap-2 justify-center">
         {data?.data?.slice(0, 8).map((card: any) => (
           <>
-            <Card card={card} key={card.id} />
+            <MostPopularProductCard fish={card} key={card.id} />
           </>
         ))}
       </div>

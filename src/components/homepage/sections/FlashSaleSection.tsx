@@ -10,7 +10,7 @@ const FlashSale = async () => {
         <p className="text-[36px] font-bold">Flash Sale</p>
         <Button text="View All >" />
       </div>
-      <div className="grid grid-cols-4 gap-x-2 justify-center">
+      <div className="grid grid-cols-3 gap-x-2 justify-center">
         {data?.data?.slice(0, 4).map((card: any) => (
           <>
             <FlashSaleCard card={card} key={card.id} />

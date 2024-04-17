@@ -1,5 +1,4 @@
 import HeroSection from "@/components/homepage/sections/Hero";
-import Affiliation from "@/components/homepage/sections/Affiliation";
 import MostPopularProducts from "@/components/homepage/sections/MostPopularProducts";
 
 import TopCategories from "@/components/homepage/sections/TopCategories";
@@ -13,7 +12,6 @@ export default async function Home() {
       <FlashSale />
       <TopCategories />
       <MostPopularProducts />
-      <Affiliation />
     </>
   );
 }
