@@ -12,7 +12,6 @@ const Card = ({ card }: any) => {
           width={400}
           height={800}
           alt="image"
-          objectFit="cover"
         />
         <p className="absolute top-4 left-4 px-4 py-1 bg-[#3d3d3d] text-[#ffffff] rounded-lg">
           -{card?.discount}%

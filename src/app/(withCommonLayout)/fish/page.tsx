@@ -1,8 +1,10 @@
 import MostPopularProductCard from "@/components/homepage/MostPopularProductCard";
 import React from "react";
 
-const page = async () => {
-  const res = await fetch("https://g-shop-server.vercel.app/api/category");
+const AllProductPage = async () => {
+  const res = await fetch("http://localhost:5000/api/fish", {
+    cache: "no-store",
+  });
   const data = await res.json();
   return (
     <div className="w-[90%] mx-auto">
@@ -24,4 +26,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default AllProductPage;

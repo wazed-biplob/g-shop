@@ -73,7 +73,7 @@ const HeroSection = ({ data }: any) => {
         <Slider {...settings} className="px-10">
           {data?.data?.map((card: any) => (
             <div key={card.id} className="pr-4">
-              <Card card={card} />
+              <Card key={card.id} card={card} />
             </div>
           ))}
         </Slider>

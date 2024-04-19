@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 import Button from "@/components/shared/Button";
 
 const TopCategories = async () => {
-  const res = await fetch("https://g-shop-server.vercel.app/api/category");
+  const res = await fetch("http://localhost:5000/api/categories");
   const data = await res.json();
   return (
     <div className="my-[100px] mt-[170px] w-[90%] mx-auto border">
@@ -23,10 +23,10 @@ const TopCategories = async () => {
         >
           <Image
             className="rounded-xl"
-            layout="fill"
-            objectFit="cover"
-            src={data?.data[0].imageURL}
+            src={data?.data[0].items[0].imageURL}
             alt="image"
+            width={400}
+            height={400}
           />
           <p className="absolute left-[16px] bottom-[20px] text-white text-[22px]">
             SaltWater Fish
@@ -37,7 +37,7 @@ const TopCategories = async () => {
             className="rounded-xl"
             width={400}
             height={400}
-            src={data?.data[1].imageURL}
+            src={data?.data[1].items[0].imageURL}
             alt="image"
           />
         </div>
@@ -46,7 +46,7 @@ const TopCategories = async () => {
             className="rounded-xl"
             width={400}
             height={400}
-            src={data?.data[2].imageURL}
+            src={data?.data[0].items[0].imageURL}
             alt="image"
           />
         </div>
@@ -55,7 +55,7 @@ const TopCategories = async () => {
             className="rounded-xl"
             width={400}
             height={400}
-            src={data?.data[3].imageURL}
+            src={data?.data[1].items[0].imageURL}
             alt="image"
           />
         </div>
