@@ -2,7 +2,7 @@ import MostPopularProductCard from "@/components/homepage/MostPopularProductCard
 import React from "react";
 
 const AllProductPage = async () => {
-  const res = await fetch("http://localhost:5000/api/fish", {
+  const res = await fetch("https://oceans-bounty-server.vercel.app/api/fish", {
     cache: "no-store",
   });
   const data = await res.json();
@@ -17,7 +17,7 @@ const AllProductPage = async () => {
           </div>
           <div className="col-span-6 sm:col-span-8 grid grid-cols-3 gap-x-2">
             {data?.data?.map((fish: any) => (
-              <MostPopularProductCard key={fish.id} fish={fish} />
+              <MostPopularProductCard key={fish?.id} fish={fish} />
             ))}
           </div>
         </div>

@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 const AllProductsPage = async () => {
-  const res = await fetch("http://localhost:5000/api/fish");
+  const res = await fetch("https://oceans-bounty-server.vercel.app/api/fish");
+
   const data = await res.json();
   return (
     <div>

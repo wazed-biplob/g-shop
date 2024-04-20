@@ -4,7 +4,9 @@ import styles from "./style.module.css";
 import Button from "@/components/shared/Button";
 
 const TopCategories = async () => {
-  const res = await fetch("http://localhost:5000/api/categories");
+  const res = await fetch(
+    "https://oceans-bounty-server.vercel.app/api/categories"
+  );
   const data = await res.json();
   return (
     <div className="my-[100px] mt-[170px] w-[90%] mx-auto border">

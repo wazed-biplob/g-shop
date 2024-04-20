@@ -1,7 +1,14 @@
 import Button from "@/components/shared/Button";
 import FlashSaleCard from "../FlashSaleCard";
 const FlashSale = async () => {
-  const res = await fetch("https://g-shop-server.vercel.app/api/category");
+  const res = await fetch(
+    "https://oceans-bounty-server.vercel.app/api/flash-sale",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
   const data = await res.json();
 
   return (

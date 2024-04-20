@@ -14,7 +14,7 @@ const Product = ({ product }: any) => {
                       width={500}
                       height={500}
                       className="h-full w-full max-w-full object-cover"
-                      src={product.imageURL}
+                      src={product?.imageURL}
                       alt=""
                     />
                   </div>
@@ -30,7 +30,7 @@ const Product = ({ product }: any) => {
                         width={100}
                         height={100}
                         className="h-full w-full object-cover"
-                        src={product.imageURL}
+                        src={product?.imageURL}
                         alt=""
                       />
                     </button>
@@ -42,7 +42,7 @@ const Product = ({ product }: any) => {
                         width={100}
                         height={100}
                         className="h-full w-full object-cover"
-                        src={product.imageURL}
+                        src={product?.imageURL}
                         alt=""
                       />
                     </button>
@@ -54,7 +54,7 @@ const Product = ({ product }: any) => {
                         width={100}
                         height={100}
                         className="h-full w-full object-cover"
-                        src={product.imageURL}
+                        src={product?.imageURL}
                         alt=""
                       />
                     </button>
@@ -65,7 +65,7 @@ const Product = ({ product }: any) => {
 
             <div className="lg:col-span-2 lg:row-span-2 lg:row-end-2">
               <h1 className="sm: text-2xl font-bold text-gray-900 sm:text-3xl">
-                {product.title}
+                {product?.title}
               </h1>
 
               <div>

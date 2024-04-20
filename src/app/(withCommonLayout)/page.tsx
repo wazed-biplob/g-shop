@@ -4,7 +4,9 @@ import MostPopularProducts from "@/components/homepage/sections/MostPopularProdu
 import TopCategories from "@/components/homepage/sections/TopCategories";
 import FlashSale from "@/components/homepage/sections/FlashSaleSection";
 export default async function Home() {
-  const res = await fetch("https://g-shop-server.vercel.app/api/category");
+  const res = await fetch(
+    "https://oceans-bounty-server.vercel.app/api/category"
+  );
   const data = await res.json();
   return (
     <>

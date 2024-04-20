@@ -1,9 +1,12 @@
 import FlashSaleCard from "@/components/homepage/FlashSaleCard";
 
 const FlashSalePage = async () => {
-  const res = await fetch("http://localhost:5000/api/flash-sale", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://oceans-bounty-server.vercel.app/api/flash-sale",
+    {
+      cache: "no-store",
+    }
+  );
   const data = await res.json();
   return (
     <div className="w-[98%] mx-auto flex flex-col justify-center">
