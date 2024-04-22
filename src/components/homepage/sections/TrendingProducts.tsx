@@ -1,6 +1,7 @@
 import Button from "@/components/shared/Button";
 import FlashSaleCard from "../FlashSaleCard";
-const FlashSale = async () => {
+import TrendingProductCard from "../TrendingProductCard";
+const TrendingProducts = async () => {
   const res = await fetch(
     "https://oceans-bounty-server.vercel.app/api/flash-sale",
     {
@@ -12,15 +13,15 @@ const FlashSale = async () => {
   const data = await res.json();
 
   return (
-    <div className="flex flex-col w-[90%] mx-auto mt-[100px]">
+    <div className="flex flex-col justify-center items-center w-[90%] mx-auto mt-[100px]">
       <div className="flex justify-between items-center w-full mb-[26px]">
-        <p className="text-[36px] font-bold">Flash Sale</p>
+        <p className="text-[36px] font-bold">Trending Products</p>
         <Button text="View All >" />
       </div>
-      <div className="grid grid-cols-3 gap-x-2 gap-y-3 justify-center">
+      <div className="grid grid-cols-3 gap-x-4 justify-center">
         {data?.data?.slice(0, 4).map((card: any) => (
           <>
-            <FlashSaleCard card={card} key={card.id} />
+            <TrendingProductCard key={card.id} card={card} />
           </>
         ))}
       </div>
@@ -28,4 +29,4 @@ const FlashSale = async () => {
   );
 };
 
-export default FlashSale;
+export default TrendingProducts;
