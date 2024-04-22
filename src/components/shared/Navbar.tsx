@@ -48,6 +48,12 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          <Link
+            href={"/dashboard"}
+            className="cursor-pointer  rounded-full px-6 py-2 text-white hover:bg-sky-600"
+          >
+            Dashboard
+          </Link>
         </ul>
         <div className="flex-30"></div>
       </nav>

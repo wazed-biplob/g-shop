@@ -34,17 +34,29 @@ const FlashSaleCard = ({ card }: any) => {
         <p className="text-sm text-gray-500 dark:text-white/60">
           {(card?.description).substring(0, 100) + "..."}
         </p>
-        <div className="text-lg font-semibold">${card?.price}</div>
+        <div className="flex justify-between items-center text-lg font-semibold">
+          <p>
+            <span className="text-3xl font-bold text-slate-900">
+              ${card?.price}
+            </span>
+            <span className="text-sm text-slate-900 line-through">
+              ${(card?.price - card?.price * (card?.discount / 100)).toFixed(2)}
+            </span>
+          </p>
+          <span className="rounded flex justify-center py-2 items-center bg-yellow-200 px-2.5 text-xs font-semibold">
+            {card?.rating}
+          </span>
+        </div>
       </div>
-      <div className="flex gap-4">
-        <button className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 hover:bg-slate-950 sm:text-sm md:text-base ">
-          Add to Cart
-        </button>
+      <div className="flex gap-4 justify-between">
         <Link href={`./fish/${card?.id}`}>
           <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
             View Details
           </button>
         </Link>
+        <button className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 hover:bg-slate-950 sm:text-sm md:text-base ">
+          Add to Cart
+        </button>
       </div>
     </div>
   );

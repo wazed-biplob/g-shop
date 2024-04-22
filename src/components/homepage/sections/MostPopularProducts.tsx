@@ -3,9 +3,9 @@ import Button from "@/components/shared/Button";
 import MostPopularProductCard from "../MostPopularProductCard";
 
 const MostPopularProducts = async () => {
-  const res = await fetch(
-    "https://oceans-bounty-server.vercel.app/api/category"
-  );
+  const res = await fetch("https://ocean-server.vercel.app/api/most-popular", {
+    cache: "no-store",
+  });
 
   const data = await res.json();
   return (
@@ -15,7 +15,7 @@ const MostPopularProducts = async () => {
         <Button classNames={``} text="View All >" />
       </div>
       <div className="grid grid-cols-4 gap-2 justify-center">
-        {data?.data?.slice(0, 8).map((card: any) => (
+        {data?.data?.map((card: any) => (
           <>
             <MostPopularProductCard fish={card} key={card.id} />
           </>

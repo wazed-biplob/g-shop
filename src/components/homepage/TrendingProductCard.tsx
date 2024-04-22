@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const TrendingProductCard = ({ card }: any) => {
   return (
@@ -10,7 +11,7 @@ const TrendingProductCard = ({ card }: any) => {
             height={400}
             src={card?.imageURL}
             alt="image"
-            className="mb-4 h-60 sm:h-96 dark:bg-gray-500 rounded-md"
+            className="mb-4 mx-auto h-60 sm:h-96 dark:bg-gray-500 rounded-md"
           />
           <h2 className="mb-1 text-xl font-semibold">
             {card?.title} {card?.category}
@@ -19,6 +20,16 @@ const TrendingProductCard = ({ card }: any) => {
             {(card?.description).substring(0, 100) + "..."}
           </p>
           <p className="text-sm inline">See More</p>
+        </div>
+        <div className="flex gap-4">
+          <button className="rounded-lg bg-slate-800 px-6 py-2 text-[12px] font-semibold text-white duration-300 hover:bg-slate-950 sm:text-sm md:text-base ">
+            Add to Cart
+          </button>
+          <Link href={`./fish/${card?.id}`}>
+            <button className="rounded-md border border-black px-4 dark:border-white dark:hover:text-slate-800 dark:hover:bg-white  py-2  duration-300 hover:bg-gray-200">
+              View Details
+            </button>
+          </Link>
         </div>
         <div className="flex flex-wrap justify-between">
           <div className="space-x-2">

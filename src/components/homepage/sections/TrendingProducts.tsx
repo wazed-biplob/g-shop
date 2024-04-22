@@ -2,14 +2,11 @@ import Button from "@/components/shared/Button";
 import FlashSaleCard from "../FlashSaleCard";
 import TrendingProductCard from "../TrendingProductCard";
 const TrendingProducts = async () => {
-  const res = await fetch(
-    "https://oceans-bounty-server.vercel.app/api/flash-sale",
-    {
-      next: {
-        revalidate: 30,
-      },
-    }
-  );
+  const res = await fetch("https://ocean-server.vercel.app/api/flash-sale", {
+    next: {
+      revalidate: 30,
+    },
+  });
   const data = await res.json();
 
   return (

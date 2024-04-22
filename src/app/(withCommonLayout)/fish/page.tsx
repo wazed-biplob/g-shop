@@ -5,11 +5,11 @@ const AllProductPage = async ({ searchParams }: any) => {
   let res;
   if (searchParams.category) {
     res = await fetch(
-      `http://localhost:5000/api/fish?category=${searchParams.category}`,
+      `https://ocean-server.vercel.app/api/fish?category=${searchParams.category}`,
       { cache: "no-store" }
     );
   } else {
-    res = await fetch("http://localhost:5000/api/fish", {
+    res = await fetch("https://ocean-server.vercel.app/api/fish", {
       cache: "no-store",
     });
   }

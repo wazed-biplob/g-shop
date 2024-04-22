@@ -17,21 +17,21 @@ const Card = ({ card }: any) => {
           -{card?.discount}%
         </p>
       </div>
-      <div className="w-[90%] mx-auto">
-        <p className="text-[22px] text-[#404040] font-[400]">{card?.title}</p>
+      <div className="w-[90%] mx-auto pt-2">
+        <p className="text-[22px] text-white font-[400]">{card?.title}</p>
         <div className="flex justify-between items-center">
           <div>
-            <span className="line-through text-[#404040] text-[14px]">
+            <span className="line-through text-white text-[14px]">
               ${card?.price}
             </span>
             <span> </span>
-            <span className="text-[14px] text-black font-bold">
+            <span className="text-[24px] text-white font-bold">
               ${(card?.price - card?.price * (card?.discount / 100)).toFixed(2)}
             </span>
           </div>
 
           <button>
-            <CiCirclePlus style={{ fontSize: "20px" }} />
+            <CiCirclePlus style={{ fontSize: "26px", color: "white" }} />
           </button>
         </div>
       </div>
