@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./style.module.css";
 import Button from "@/components/shared/Button";
+import Link from "next/link";
 
 const TopCategories = async () => {
   const res = await fetch(
@@ -20,19 +21,38 @@ const TopCategories = async () => {
         </p>
       </div>
       <div className="grid grid-cols-3 grid-rows-2 gap-4 px-8 mt-8">
+        {" "}
         <div
           className={`${styles["parent-container"]} w-full row-span-2 relative`}
         >
-          <Image
-            className="rounded-xl"
-            src={data?.data[0].items[0].imageURL}
-            alt="image"
-            width={400}
-            height={400}
-          />
-          <p className="absolute left-[16px] bottom-[20px] text-white text-[22px]">
-            SaltWater Fish
-          </p>
+          <Link href={`fish?category=${data?.data[0]._id}`}>
+            <Image
+              className="rounded-xl hover:opacity-50"
+              src={data?.data[0].items[0].imageURL}
+              alt="image"
+              width={400}
+              height={400}
+            />{" "}
+          </Link>
+          <span className="absolute w-full left-[0] bottom-[0] text-white text-[22px]">
+            <div className="">
+              <div className="group opacity-60 relative px-2 py-2 rounded-br-md rounded-bl-md border bg-slate-300 text-black  shadow-lg transition-all duration-200 ease-in-out">
+                <h3 className="uppercase text-[16px] font-bold text-black">
+                  {data?.data?.[0].total} Items
+                </h3>
+                <p className="mt-2 font-sans text-3xl font-bold">
+                  {data?.data?.[1]._id}
+                </p>
+                <p className="mt-4">
+                  {data?.data[1].items.map((item: any) => (
+                    <span className="mr-2 font-bold" key={item.id}>
+                      {item.title}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div>
+          </span>
         </div>
         <div className={`${styles["parent-container"]} w-full row-span-1`}>
           <Image

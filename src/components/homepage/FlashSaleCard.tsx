@@ -1,9 +1,27 @@
+"use client";
+import CountdownTimer from "@/app/lib/CountdownTimer";
 import Image from "next/image";
 import Link from "next/link";
-
+import styles from "./style.module.css";
 const FlashSaleCard = ({ card }: any) => {
   return (
-    <div className="mx-auto max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px] dark:bg-[#18181B]">
+    <div className="mx-auto max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px]">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <div className={styles.blink}>
+          <CountdownTimer
+            targetDate={card?.updatedAt}
+            countdown={card?.countdown}
+          />
+        </div>
+        <p>{card?.discount}%</p>
+      </div>
+
       <Image
         width={200}
         height={200}

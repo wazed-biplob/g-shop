@@ -1,11 +1,21 @@
 import MostPopularProductCard from "@/components/homepage/MostPopularProductCard";
 import React from "react";
 
-const AllProductPage = async () => {
-  const res = await fetch("https://oceans-bounty-server.vercel.app/api/fish", {
-    cache: "no-store",
-  });
+const AllProductPage = async ({ searchParams }: any) => {
+  let res;
+  if (searchParams.category) {
+    res = await fetch(
+      `http://localhost:5000/api/fish?category=${searchParams.category}`,
+      { cache: "no-store" }
+    );
+  } else {
+    res = await fetch("http://localhost:5000/api/fish", {
+      cache: "no-store",
+    });
+  }
+
   const data = await res.json();
+  console.log(data);
   return (
     <div className="w-[90%] mx-auto">
       <div className=" mx-4 min-h-screen max-w-screen-xl xl:mx-auto">

@@ -2,7 +2,7 @@ import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import Affiliation from "@/components/homepage/sections/Affiliation";
 
-const CommonLayout = ({ children }: { children: React.ReactNode }) => {
+const WithCommonLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
@@ -13,4 +13,4 @@ const CommonLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default CommonLayout;
+export default WithCommonLayout;

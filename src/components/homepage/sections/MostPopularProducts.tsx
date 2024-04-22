@@ -1,10 +1,12 @@
 import React from "react";
-import Card from "../Card";
 import Button from "@/components/shared/Button";
 import MostPopularProductCard from "../MostPopularProductCard";
 
 const MostPopularProducts = async () => {
-  const res = await fetch("https://g-shop-server.vercel.app/api/category");
+  const res = await fetch(
+    "https://oceans-bounty-server.vercel.app/api/category"
+  );
+
   const data = await res.json();
   return (
     <div className="w-[90%] mx-auto">
