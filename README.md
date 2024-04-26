@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Oceans' Bounty Grocery Shop
 
-## Getting Started
+by : [@wazed_biplob](https://github.com/wazed-biplob)
 
-First, run the development server:
+## Features
+
+This project demonstrates basic NEXTjs [with Typescript] Website using Moongoose in an Express Application. The main features of this project are :
+
+- Strict Data Model Definition using Typescript
+- Smooth API request and response error handler
+- Image Optimisation with Next's <image> tag
+- Usage of SSR + SSG in Fetching Date from the server
+- Usage of ISR for smooth user experience
+
+## Description
+
+This is a Grocer Shop Web App based on the niche 'Fish'. The website has various types of products like Saltwater Fish, FreshWater Fish, Dolphin Fish etc. It's mainly based on the theme and structure of an e-Commerce Website.
+
+## Local Installation
+
+Download This Project directly or clone it with git command in your CLI, then Go to the Project Folder, and Run the below-written command in the CLI :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After completion of Installation, Run :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech
 
-## Learn More
+- Next
+- Typescript
 
-To learn more about Next.js, take a look at the following resources:
+## Live Link
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### You may check the APP with this live link :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [ocean's-bounty.com](https://oceans-bounty-wb.vercel.app/)
 
-## Deploy on Vercel
+## Support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Regarding this project, if any query arises, mail me at www.biplob@gmail.com
