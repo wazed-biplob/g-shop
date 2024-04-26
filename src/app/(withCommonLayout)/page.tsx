@@ -1,21 +1,22 @@
 import HeroSection from "@/components/homepage/sections/Hero";
-import MostPopularProducts from "@/components/homepage/sections/MostPopularProducts";
 import TopCategories from "@/components/homepage/sections/TopCategories";
 import FlashSale from "@/components/homepage/sections/FlashSaleSection";
 import TrendingProducts from "@/components/homepage/sections/TrendingProducts";
+import StateSection from "@/components/homepage/sections/StateSection";
+
 const HomePage = async () => {
-  const res = await fetch("https://ocean-server.vercel.app/api/category", {
+  const res = await fetch("https://ocean-server.vercel.app/api/fish", {
     cache: "no-store",
   });
   const data = await res.json();
   return (
-    <>
+    <div className="font-sans">
       <HeroSection data={data} />
       <FlashSale />
-      <TrendingProducts />
       <TopCategories />
-      <MostPopularProducts />
-    </>
+      <TrendingProducts />
+      <StateSection />
+    </div>
   );
 };
 

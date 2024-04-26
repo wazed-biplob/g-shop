@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -58,96 +59,46 @@ const Footer = () => {
           <div className="flex flex-col space-y-4">
             <h2 className="font-medium">Ocean&apos;s Bounty</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
-              <a rel="noopener noreferrer" href="#">
-                HomePage
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Our Shop
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Special Offers
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Receipes
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Contact Us
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                About Us
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                FAQ
-              </a>
+              <Link href="/">HomePage</Link>
+              <Link href="">Our Shop</Link>
+              <Link href="#">Special Offers</Link>
+              <Link href="#">Receipes</Link>
+              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/about-us">About Us</Link>
+              <Link href="#">FAQ</Link>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <h2 className="font-medium">Support & Resources</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
-              <a rel="noopener noreferrer" href="#">
-                Order Tracking
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Shipping & Delivery
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Return &amp; Refunds
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Privacy Policy
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Blogs
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Customer Reviews
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Adding New Utilities
-              </a>
+              <Link href="#">Order Tracking</Link>
+              <Link href="#">Shipping & Delivery</Link>
+              <Link href="#">Return &amp; Refunds</Link>
+              <Link href="#">Privacy Policy</Link>
+              <Link href="#">Blogs</Link>
+              <Link href="#">Customer Reviews</Link>
+              <Link href="#">Adding New Utilities</Link>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <h2 className="font-medium">Services & Partnerships</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
-              <a rel="noopener noreferrer" href="#">
-                Local Suppliers
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Cooking Classes
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Gift Cards
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Corporate Partnerships
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Health & Nutrition{" "}
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Events and Tastings
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Charity initiatives
-              </a>
+              <Link href="#">Local Suppliers</Link>
+              <Link href="#">Cooking Classes</Link>
+              <Link href="#">Gift Cards</Link>
+              <Link href="#">Corporate Partnerships</Link>
+              <Link href="#">Health & Nutrition </Link>
+              <Link href="#">Events and Tastings</Link>
+              <Link href="#">Charity initiatives</Link>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <h2 className="font-medium">Community</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
-              <a rel="noopener noreferrer" href="#">
-                GitHub
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Discord
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                Twitter
-              </a>
-              <a rel="noopener noreferrer" href="#">
-                YouTube
-              </a>
+              <Link href="#">GitHub</Link>
+              <Link href="#">Discord</Link>
+              <Link href="#">Twitter</Link>
+              <Link href="#">YouTube</Link>
             </div>
           </div>
         </div>

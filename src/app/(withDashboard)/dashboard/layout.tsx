@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillDatabase } from "react-icons/ai";
 
-const DashBoardLayout = ({ children }: any) => {
+const DashBoardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="bg-slate-200 flex h-screen">

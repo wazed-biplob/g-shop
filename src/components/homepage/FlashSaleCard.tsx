@@ -3,32 +3,42 @@ import CountdownTimer from "@/app/lib/CountdownTimer";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./style.module.css";
-const FlashSaleCard = ({ card }: any) => {
+import { TProduct } from "@/app/types/type";
+const FlashSaleCard = ({ card }: { card: TProduct }) => {
   return (
     <div className="mx-auto max-w-[350px] space-y-4 rounded-lg bg-white p-6 shadow-lg md:w-[350px]">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <div className={styles.blink}>
+      <div className="relative">
+        <Image
+          width={200}
+          height={200}
+          className="h-[275px] w-[350px] rounded-lg object-cover"
+          src={card?.imageURL}
+          alt="card"
+        />
+
+        <div
+          className={styles.blink}
+          style={{
+            width: "100%",
+            backgroundColor: "gray",
+            borderRadius: "10px",
+            padding: "0 15px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        >
           <CountdownTimer
             targetDate={card?.updatedAt}
             countdown={card?.countdown}
           />
+          <p className="text-white">{card?.discount}%</p>
         </div>
-        <p>{card?.discount}%</p>
       </div>
 
-      <Image
-        width={200}
-        height={200}
-        className="h-[275px] w-[350px] rounded-lg object-cover"
-        src={card?.imageURL}
-        alt="card"
-      />
       <div className="grid gap-2">
         <h1 className="text-lg font-semibold ">{card?.title}</h1>
         <p className="text-sm text-gray-500 dark:text-white/60">

@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
-const CountdownTimer = ({ targetDate, countdown }: any) => {
+const CountdownTimer = ({
+  targetDate,
+  countdown,
+}: {
+  targetDate: string | Date;
+  countdown: any;
+}) => {
+  // targetDate = updatedAt
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
   function calculateTimeRemaining() {
@@ -17,12 +24,12 @@ const CountdownTimer = ({ targetDate, countdown }: any) => {
     targetDate = givenDate.toISOString();
 
     targetDate = new Date(targetDate);
-    const difference = currentTime - targetDate.getTime();
+    const difference = targetDate.getTime() - currentTime;
     return difference >= 0 ? difference : 0;
   }
 
   // Function to format the time remaining
-  function formatTimeRemaining(remaining: any) {
+  function formatTimeRemaining(remaining: number) {
     const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
       (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -44,7 +51,9 @@ const CountdownTimer = ({ targetDate, countdown }: any) => {
 
   return (
     <div className="mx-auto w-full">
-      <p className="text-[26px]">{formatTimeRemaining(timeRemaining)}</p>
+      <p className="text-[26px] text-white">
+        {formatTimeRemaining(timeRemaining)}
+      </p>
     </div>
   );
 };

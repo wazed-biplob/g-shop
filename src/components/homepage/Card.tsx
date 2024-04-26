@@ -2,7 +2,9 @@ import Image from "next/image";
 import React from "react";
 import styles from "./sections/style.module.css";
 import { CiCirclePlus } from "react-icons/ci";
-const Card = ({ card }: any) => {
+import Link from "next/link";
+import { TProduct } from "@/app/types/type";
+const Card = ({ card }: { card: TProduct }) => {
   return (
     <div className="flex flex-col border rounded-lg pb-2">
       <div className={`${styles["parent-container"]} relative`}>
@@ -21,18 +23,18 @@ const Card = ({ card }: any) => {
         <p className="text-[22px] text-white font-[400]">{card?.title}</p>
         <div className="flex justify-between items-center">
           <div>
-            <span className="line-through text-white text-[14px]">
+            <span className="line-through text-white text-[24px]">
               ${card?.price}
             </span>
             <span> </span>
-            <span className="text-[24px] text-white font-bold">
+            <span className="text-[34px] text-white">
               ${(card?.price - card?.price * (card?.discount / 100)).toFixed(2)}
             </span>
           </div>
 
-          <button>
-            <CiCirclePlus style={{ fontSize: "26px", color: "white" }} />
-          </button>
+          <Link href={`/fish/${card?.id}`}>
+            <CiCirclePlus style={{ fontSize: "46px", color: "white" }} />
+          </Link>
         </div>
       </div>
     </div>

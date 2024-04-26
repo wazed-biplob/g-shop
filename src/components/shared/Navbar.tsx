@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FaSquare } from "react-icons/fa";
+import { FaSquarePlus } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -11,7 +13,7 @@ const Navbar = () => {
             &apos;s Bounty
           </Link>
         </div>
-        <ul className="flex-30 flex items-center justify-center gap-6 text-slate-900">
+        <ul className="flex-30 flex items-center justify-center gap-2 text-slate-900">
           <Link
             href={"/"}
             className="cursor-pointer  rounded-full  px-6 py-2 text-white hover:bg-sky-600"
@@ -48,14 +50,15 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+        </ul>
+        <div>
           <Link
             href={"/dashboard"}
-            className="cursor-pointer  rounded-full px-6 py-2 text-white hover:bg-sky-600"
+            className="cursor-pointer flex items-center gap-x-2 rounded-full px-6 py-2 text-white hover:bg-sky-600"
           >
-            Dashboard
+            <FaSquarePlus className="text-[22px] text-gray-300" /> Dashboard
           </Link>
-        </ul>
-        <div className="flex-30"></div>
+        </div>
       </nav>
     </>
   );

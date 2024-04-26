@@ -1,7 +1,9 @@
+import { TProduct } from "@/app/types/type";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const MostPopularProductCard = ({ fish }: any) => {
+const ProductCard = ({ fish }: { fish: TProduct }) => {
   return (
     <>
       <div className="relative m-10 w-full max-w-xs overflow-hidden rounded-lg bg-white shadow-md">
@@ -45,12 +47,12 @@ const MostPopularProductCard = ({ fish }: any) => {
                 )}
               </span>
             </p>
-            <a
-              href="#"
+            <Link
+              href={`/fish/${fish?.id}`}
               className="flex items-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
             >
               View Details
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -58,4 +60,4 @@ const MostPopularProductCard = ({ fish }: any) => {
   );
 };
 
-export default MostPopularProductCard;
+export default ProductCard;

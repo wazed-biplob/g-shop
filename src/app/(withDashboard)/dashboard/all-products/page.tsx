@@ -1,8 +1,11 @@
+import { TProduct } from "@/app/types/type";
 import Image from "next/image";
 import React from "react";
 
 const AllProductsPage = async () => {
-  const res = await fetch("https://ocean-server.vercel.app/api/fish");
+  const res = await fetch("https://ocean-server.vercel.app/api/fish", {
+    cache: "no-store",
+  });
 
   const data = await res.json();
   return (
@@ -27,7 +30,7 @@ const AllProductsPage = async () => {
                 </tr>
               </thead>
               <tbody className="text-gray-500">
-                {data?.data?.map((product: any, idx: any) => (
+                {data?.data?.map((product: TProduct, idx: number) => (
                   <tr key={product?.id}>
                     <td className="border-b border-gray-200 bg-white px-5 py-5 text-sm">
                       <p className="whitespace-no-wrap">{idx + 1}</p>
@@ -67,20 +70,6 @@ const AllProductsPage = async () => {
                 ))}
               </tbody>
             </table>
-          </div>
-          <div className="flex flex-col items-center border-t bg-white px-5 py-5 sm:flex-row sm:justify-between">
-            <span className="text-xs text-gray-600 sm:text-sm">
-              {" "}
-              Showing 1 to 5 of 12 Entries{" "}
-            </span>
-            <div className="mt-2 inline-flex sm:mt-0">
-              <button className="mr-2 h-12 w-12 rounded-full border text-sm font-semibold text-gray-600 transition duration-150 hover:bg-gray-100">
-                Prev
-              </button>
-              <button className="h-12 w-12 rounded-full border text-sm font-semibold text-gray-600 transition duration-150 hover:bg-gray-100">
-                Next
-              </button>
-            </div>
           </div>
         </div>
       </div>

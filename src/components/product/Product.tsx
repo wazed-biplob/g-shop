@@ -1,6 +1,7 @@
+import { TProduct } from "@/app/types/type";
 import Image from "next/image";
 
-const Product = ({ product }: any) => {
+const Product = ({ product }: { product: TProduct }) => {
   return (
     <div>
       <section className="py-12 sm:py-16">

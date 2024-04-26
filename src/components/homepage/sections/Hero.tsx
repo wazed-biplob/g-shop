@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Card from "../Card";
 import { FaArrowAltCircleRight } from "react-icons/fa";
+import { TProduct, TResponseData } from "@/app/types/type";
 
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -47,7 +48,7 @@ function SamplePrevArrow(props: any) {
   );
 }
 
-const HeroSection = ({ data }: any) => {
+const HeroSection = ({ data }: { data: TResponseData }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -55,6 +56,8 @@ const HeroSection = ({ data }: any) => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -71,7 +74,7 @@ const HeroSection = ({ data }: any) => {
       </div>
       <div className="slider-container px-8 w-[90%] mx-auto mt-[60px]">
         <Slider {...settings} className="px-10">
-          {data?.data?.map((card: any) => (
+          {data?.data?.slice(0, 4).map((card: TProduct) => (
             <div key={card.id} className="pr-4">
               <Card key={card.id} card={card} />
             </div>

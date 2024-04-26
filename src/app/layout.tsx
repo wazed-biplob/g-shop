@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Oxygen } from "next/font/google";
 import "./globals.css";
-import { useState } from "react";
 
 const oxygen = Oxygen({
   weight: ["300", "400", "700"],
